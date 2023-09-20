@@ -1,0 +1,28 @@
+Edupia-Math:
+production --> /toan
+tsc *.ts --watch
+-- --host=0.0.0.0
+
+--AXIOS CREATE--
+const coreApiService = axios.create({
+  baseURL: 'https://api-cms-core.edupia.vn/api/v1',
+  headers: {
+    access_user: '0985423251',
+    access_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5ODU0MjMyNTEiLCJ1c2VyX2lkIjo3NzAyOTMzLCJpYXQiOjE2ODA5MjQ3MjUsImV4cCI6MTc3NTU5NzUyNX0.V1hnMW_9eETiwg3pvJ5fpP4AuGMVxLojNa8FKp_xF8g',
+  }
+});
+
+const getExercise = async () => {
+  return coreApiService.post("/getExerciseInfo", {
+    exercise_id: 18799,
+  })
+    .then((response) => {
+      return response;
+    });
+} 
+data.exercise = (await getExercise()).data.message; 
+
+Thay đổi repository trên github
+
+git remote -v
+git remote set-url origin https://github.com/HoangLQ212/test-git.git
