@@ -25,4 +25,4 @@ data.exercise = (await getExercise()).data.message;
 Thay đổi repository trên github
 
 git remote -v
-git remote set-url origin https://github.com/HoangLQ212/test-git.git
+git remote set-url origin git@gitlab.com:codetot/blog-v2.git
